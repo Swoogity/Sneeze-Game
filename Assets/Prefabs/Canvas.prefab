@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -276.8, y: 139.6}
+  m_AnchoredPosition: {x: -194, y: 147}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8915604941146258659
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b934881cf017d4d8533b6cd7a2e846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeLeft: 30
+  TimeLeft: 45
   TimerOn: 0
   TimerText: {fileID: 1622178740052777148}
 --- !u!1 &7014743418230630114
@@ -233,7 +233,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 379, y: 147}
+  m_AnchoredPosition: {x: 303, y: 147}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7544878152241418445
@@ -292,6 +292,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b934881cf017d4d8533b6cd7a2e846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeLeft: 30
+  TimeLeft: 45
   TimerOn: 0
   TimerText: {fileID: 8371608502500020081}
