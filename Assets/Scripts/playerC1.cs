@@ -29,7 +29,13 @@ public class playerC1 : MonoBehaviour
     public AudioSource playerAudio;
     public AudioClip jumpSound;
     public AudioClip landSound;
-    public AudioClip pipe;
+    public AudioClip pipeSound;
+    public AudioClip yipeeSound;
+    public AudioClip chargeSound;
+
+    // animation
+    public Animator anim;
+    public SpriteRenderer sprite;
 
     // to get boolean from timer script
     public Timer timer;
@@ -54,15 +60,30 @@ public class playerC1 : MonoBehaviour
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
 
-        // walking while on ground
+        // ---------------walking while on ground------------------------
+        // walk right
         if (Input.GetKey(KeyCode.D) && isOnGround && chargingJump == false && timer.TimerOn) 
         {
             transform.Translate(Vector3.right * Time.deltaTime * speed);
+            anim.SetBool("Is Walking", true);
+            sprite.flipX = false;
         }
-
-        if (Input.GetKey(KeyCode.A) && isOnGround && chargingJump == false && timer.TimerOn)
+        // stop walking animation
+        if (Input.GetKeyUp(KeyCode.D) && isOnGround && chargingJump == false && timer.TimerOn) 
+        {
+            anim.SetBool("Is Walking", false);
+        }
+        // walk left
+            if (Input.GetKey(KeyCode.A) && isOnGround && chargingJump == false && timer.TimerOn)
         {
             transform.Translate(Vector3.left * Time.deltaTime * speed);
+            anim.SetBool("Is Walking", true);
+            sprite.flipX = true;
+        }
+        // stop walking animation
+        if (Input.GetKeyUp(KeyCode.A) && isOnGround && chargingJump == false && timer.TimerOn)
+        {
+            anim.SetBool("Is Walking", false);
         }
 
         // strafing while mid air
@@ -83,6 +104,9 @@ public class playerC1 : MonoBehaviour
         {
             // begin charging jump
             chargingJump = true;
+            anim.SetBool("Is chargeing ", true);
+           // playerAudio.clip = chargeSound;
+            //playerAudio.Play();
         }
 
         // charge jump variable
@@ -92,6 +116,7 @@ public class playerC1 : MonoBehaviour
             if (charge > maxCharge)
             {
                 charge = maxCharge;
+                anim.SetBool("Charge Sneeze Full", true);
             }
         }
 
@@ -101,12 +126,15 @@ public class playerC1 : MonoBehaviour
             isOnGround = true;
         }
 
-                // release charge
-                if (Input.GetKeyUp(KeyCode.Space))
+        // release charge
+        if (Input.GetKeyUp(KeyCode.Space))
         {
             // begin charging jump
             chargingJump = false;
             charge = 0;
+            anim.SetBool("Is chargeing ", false);
+            anim.SetBool("Charge Sneeze Full", false);
+            //playerAudio.Play();
         }
 
         // jump up
@@ -115,6 +143,8 @@ public class playerC1 : MonoBehaviour
             rBody.AddForce(transform.up * charge * jumpHeightV, ForceMode.Impulse);
             playerAudio.PlayOneShot(jumpSound, 1.0f);
             isOnGround = false;
+            anim.SetBool("Is Sneezeing up", true);
+            playerAudio.PlayOneShot(yipeeSound, 1.5f);
         }
 
         // jump right
@@ -124,6 +154,9 @@ public class playerC1 : MonoBehaviour
             rBody.AddForce(transform.right * charge * jumpHeightH, ForceMode.Impulse);
             playerAudio.PlayOneShot(jumpSound, 1.0f);
             isOnGround = false;
+            anim.SetBool("Is sneezing left", true);
+            sprite.flipX = true;
+            playerAudio.PlayOneShot(yipeeSound, 1.5f);
         }
 
         // jump left
@@ -133,6 +166,9 @@ public class playerC1 : MonoBehaviour
             rBody.AddForce(transform.right * charge * -jumpHeightH, ForceMode.Impulse);
             playerAudio.PlayOneShot(jumpSound, 1.0f);
             isOnGround = false;
+            anim.SetBool("Is sneezing left", true);
+            sprite.flipX = false;
+            playerAudio.PlayOneShot(yipeeSound, 1.5f);
         }
 
         // player death
@@ -150,20 +186,33 @@ public class playerC1 : MonoBehaviour
             playerAudio.PlayOneShot(landSound, 1.0f);
             charge = 0;
             isOnGround = true;
+            anim.SetBool("Is Sneezeing up", false);
+            anim.SetBool("Is sneezing left", false);
         }
 
         // makes player bounce off walls
         if (collision.gameObject.CompareTag("Left_Wall")) 
         {
             rBody.AddForce(Vector3.right * wallBonk, ForceMode.Impulse);
+            anim.SetBool("Is sneezing left", true);
+            anim.SetBool("Is Sneezeing up", false);
+            sprite.flipX = true;
+            playerAudio.PlayOneShot(landSound, 2.0f);
         }
         if (collision.gameObject.CompareTag("Right_Wall"))
         {
             rBody.AddForce(Vector3.right * -wallBonk, ForceMode.Impulse);
+            anim.SetBool("Is sneezing left", true);
+            anim.SetBool("Is Sneezeing up", false);
+            sprite.flipX = false;
+            playerAudio.PlayOneShot(landSound, 2.0f);
         }
         if (collision.gameObject.CompareTag("Top_Wall"))
         {
             rBody.AddForce(Vector3.down * wallBonk, ForceMode.Impulse);
+            anim.SetBool("Is Sneezeing up", true);
+            anim.SetBool("Is sneezing left", false);
+            playerAudio.PlayOneShot(landSound, 2.0f);
         }
     }
 
