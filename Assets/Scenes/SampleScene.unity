@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -288,7 +288,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c4e5cc6b70e87e64b821a7ef4b0cb2fd, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1609,11 +1609,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 270f1f83fa64bdd41a2e471969698dcc, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: 5cc8cbdf59eab4a4c9581721e2efe5af, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.589
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2057,7 +2057,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c4e5cc6b70e87e64b821a7ef4b0cb2fd, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3295,6 +3295,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2035661486}
     - target: {fileID: 6722949324255400953, guid: 21fe5ae6f738e2445a47387edb4b222e, type: 3}
+      propertyPath: bellSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 4612ffa0523a82e478631274c4946cb2, type: 3}
+    - target: {fileID: 6722949324255400953, guid: 21fe5ae6f738e2445a47387edb4b222e, type: 3}
+      propertyPath: tadaSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b99d40d5c18173f4ab0bd4a80da8c41f, type: 3}
+    - target: {fileID: 6722949324255400953, guid: 21fe5ae6f738e2445a47387edb4b222e, type: 3}
+      propertyPath: yellSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d510031e4c2839d418848262a89ddc4d, type: 3}
+    - target: {fileID: 6722949324255400953, guid: 21fe5ae6f738e2445a47387edb4b222e, type: 3}
       propertyPath: chargeAudio
       value: 
       objectReference: {fileID: 77869271}
@@ -4385,6 +4397,18 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 688857225}
+    - target: {fileID: 8111235276027577617, guid: 09b859cb4241c714b9eb1818075ffb3e, type: 3}
+      propertyPath: bellSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 4612ffa0523a82e478631274c4946cb2, type: 3}
+    - target: {fileID: 8111235276027577617, guid: 09b859cb4241c714b9eb1818075ffb3e, type: 3}
+      propertyPath: tadaSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b99d40d5c18173f4ab0bd4a80da8c41f, type: 3}
+    - target: {fileID: 8111235276027577617, guid: 09b859cb4241c714b9eb1818075ffb3e, type: 3}
+      propertyPath: yellSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d510031e4c2839d418848262a89ddc4d, type: 3}
     - target: {fileID: 8111235276027577617, guid: 09b859cb4241c714b9eb1818075ffb3e, type: 3}
       propertyPath: chargeAudio
       value: 

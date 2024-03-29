@@ -26,7 +26,7 @@ public class PlayerControls : MonoBehaviour
     // jumping charge
     public float chargePerSec = 4.0f;
     public float maxCharge = 25;
-    public float charge = 0.0f;
+    public float charge = 5.0f;
 
     // wall bouncyness
     public float wallBonk = 750.0f;
@@ -39,6 +39,9 @@ public class PlayerControls : MonoBehaviour
     public AudioClip landSound;
     public AudioClip pipeSound;
     public AudioClip yipeeSound;
+    public AudioClip yellSound;
+    public AudioClip bellSound;
+    public AudioClip tadaSound;
 
     // animation
     public Animator anim;
@@ -126,7 +129,7 @@ public class PlayerControls : MonoBehaviour
         {
             // begin charging jump
             chargingJump = false;
-            charge = 0;
+            charge = 5;
             anim.SetBool("Is chargeing ", false);
             anim.SetBool("Charge Sneeze Full", false);
             chargeAudio.Stop();
@@ -171,6 +174,11 @@ public class PlayerControls : MonoBehaviour
         }
 
         // ----------------------------------------PLAYER DEATH-------------------------------------------//
+        if (timer.TimeLeft < 3.6) 
+        { 
+            playerAudio.PlayOneShot(yellSound, 0.7f);
+        }
+
         if (timer.TimerOn == false)
         {
             SceneManager.LoadScene(DeathScene);
@@ -183,7 +191,7 @@ public class PlayerControls : MonoBehaviour
         if (collision2D.gameObject.CompareTag("Ground"))
         {
             playerAudio.PlayOneShot(landSound, 1.0f);
-            charge = 0;
+            charge = 5;
             isOnGround = true;
             anim.SetBool("Is Sneezeing up", false);
             anim.SetBool("Is sneezing left", false);
@@ -196,7 +204,7 @@ public class PlayerControls : MonoBehaviour
             anim.SetBool("Is sneezing left", true);
             anim.SetBool("Is Sneezeing up", false);
             sprite.flipX = true;
-            playerAudio.PlayOneShot(landSound, 2.0f);
+            playerAudio.PlayOneShot(bellSound, 1.0f);
         }
         if (collision2D.gameObject.CompareTag("Right_Wall"))
         {
@@ -204,14 +212,14 @@ public class PlayerControls : MonoBehaviour
             anim.SetBool("Is sneezing left", true);
             anim.SetBool("Is Sneezeing up", false);
             sprite.flipX = false;
-            playerAudio.PlayOneShot(landSound, 2.0f);
+            playerAudio.PlayOneShot(bellSound, 1.0f);
         }
         if (collision2D.gameObject.CompareTag("Top_Wall"))
         {
             rBody.AddForce(Vector3.down * wallBonk, ForceMode2D.Impulse);
             anim.SetBool("Is Sneezeing up", true);
             anim.SetBool("Is sneezing left", false);
-            playerAudio.PlayOneShot(landSound, 2.0f);
+            playerAudio.PlayOneShot(bellSound, 1.0f);
         }
     }
 
@@ -223,6 +231,7 @@ public class PlayerControls : MonoBehaviour
             // add time to timer
             Destroy(other.gameObject);
             timer.PowerUp();
+            playerAudio.PlayOneShot(tadaSound, 3.0f);
             // maybe use this for how long till next one spawns->
             // StartCoroutine(goBack());
         }
