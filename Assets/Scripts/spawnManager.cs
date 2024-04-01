@@ -31,7 +31,7 @@ public class spawnManager : MonoBehaviour
         // instantiate at one of the chosen spawn locations
         Instantiate(pickup, spawnPoints[spawnRange], pickup.transform.rotation);
 
-        spawnInterval = Random.Range(10.0f, 15.0f);
+        spawnInterval = Random.Range(3.0f, 5.0f);
         Invoke("SpawnPickup", spawnInterval);
 
     }

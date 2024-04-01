@@ -56,7 +56,7 @@ public class Timer : MonoBehaviour
    // }
     public void PowerUp() 
     {
-        TimeLeft += 15;
+        TimeLeft += 5;
     }
     
 }
