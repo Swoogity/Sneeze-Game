@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000022888, y: -17}
+  m_AnchoredPosition: {x: 0.000022888, y: -64}
   m_SizeDelta: {x: 587.6823, y: 60.6053}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &86356768
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Filipe Agostinho - Sound Designer
+  m_text: Filipe Agostinho - Sound and Music Designer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7b2004954ebd88c449141bca1a9dd91a, type: 2}
   m_sharedMaterial: {fileID: -2924969176411092929, guid: 7b2004954ebd88c449141bca1a9dd91a, type: 2}
@@ -799,7 +799,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000076294, y: 33.697}
+  m_AnchoredPosition: {x: -0.0000076294, y: 8}
   m_SizeDelta: {x: 587.6823, y: 60.6053}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1052934031
@@ -822,7 +822,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Adam Niemi - Animator and Artist
+  m_text: Adam Niemi - Animator, Artist,  and Level Designer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7b2004954ebd88c449141bca1a9dd91a, type: 2}
   m_sharedMaterial: {fileID: -2924969176411092929, guid: 7b2004954ebd88c449141bca1a9dd91a, type: 2}
@@ -935,7 +935,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.2201e-10, y: -133}
+  m_AnchoredPosition: {x: 4.2201e-10, y: -178}
   m_SizeDelta: {x: 190, y: 51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1311793020
@@ -1244,7 +1244,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000022888, y: -65}
+  m_AnchoredPosition: {x: 0.000022888, y: -134}
   m_SizeDelta: {x: 587.6823, y: 60.6053}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1768275077
@@ -1267,7 +1267,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Heather DeRuyck - Level Designer
+  m_text: Heather DeRuyck - UI Designer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7b2004954ebd88c449141bca1a9dd91a, type: 2}
   m_sharedMaterial: {fileID: -2924969176411092929, guid: 7b2004954ebd88c449141bca1a9dd91a, type: 2}
@@ -1378,7 +1378,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 89}
+  m_AnchoredPosition: {x: -33, y: 89}
   m_SizeDelta: {x: 478.0943, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1925528738
@@ -1401,7 +1401,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tyler LaFleur - Programmer
+  m_text: Tyler LaFleur - Programmer, UI Designer, and Level Designer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7b2004954ebd88c449141bca1a9dd91a, type: 2}
   m_sharedMaterial: {fileID: -2924969176411092929, guid: 7b2004954ebd88c449141bca1a9dd91a, type: 2}
@@ -1464,7 +1464,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -70.95508, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

@@ -658,7 +658,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c4e5cc6b70e87e64b821a7ef4b0cb2fd, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.6
+  m_Volume: 0.35
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1526,7 +1526,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5cc8cbdf59eab4a4c9581721e2efe5af, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.167
+  m_Volume: 0.131
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2781,7 +2781,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.589
+  m_Volume: 0.399
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3395,7 +3395,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c4e5cc6b70e87e64b821a7ef4b0cb2fd, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.6
+  m_Volume: 0.35
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -7437,6 +7437,18 @@ PrefabInstance:
       value: Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 8371608502500020081, guid: d6167348ca51ec04593c679446acad0e, type: 3}
+      propertyPath: m_Color.b
+      value: 0.3803922
+      objectReference: {fileID: 0}
+    - target: {fileID: 8371608502500020081, guid: d6167348ca51ec04593c679446acad0e, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 8371608502500020081, guid: d6167348ca51ec04593c679446acad0e, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9960785
+      objectReference: {fileID: 0}
+    - target: {fileID: 8371608502500020081, guid: d6167348ca51ec04593c679446acad0e, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: 8452439b4d124db4cb7f21f6e65fff3d, type: 3}
@@ -7537,6 +7549,10 @@ PrefabInstance:
       propertyPath: sprite
       value: 
       objectReference: {fileID: 2034285383}
+    - target: {fileID: 8111235276027577617, guid: 09b859cb4241c714b9eb1818075ffb3e, type: 3}
+      propertyPath: StartJump
+      value: 52
+      objectReference: {fileID: 0}
     - target: {fileID: 8111235276027577617, guid: 09b859cb4241c714b9eb1818075ffb3e, type: 3}
       propertyPath: bellSound
       value: 

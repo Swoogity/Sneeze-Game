@@ -174,10 +174,10 @@ public class PlayerControls : MonoBehaviour
         }
 
         // ----------------------------------------PLAYER DEATH-------------------------------------------//
-        if (timer.TimeLeft < 3.6) 
-        { 
-            playerAudio.PlayOneShot(yellSound, 0.7f);
-        }
+        //if (timer.TimeLeft < 3.6) 
+        //{ 
+        //    playerAudio.PlayOneShot(yellSound, 0.7f);
+        //}
 
         if (timer.TimerOn == false)
         {
